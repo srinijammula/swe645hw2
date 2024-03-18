@@ -17,4 +17,10 @@ spec:
         image: srinijammula/demo1
         ports:
         - containerPort: 8080
-
+        resources:
+            requests:
+              cpu: "100m"
+              memory: "200Mi"
+            limits:
+              cpu: "200m"
+              memory: "400Mi"

@@ -9,7 +9,7 @@ pipeline{
 				script{
 					checkout scm
 					sh 'rm -rf *.war'
-					sh 'jar -cvf demo1.war -C src/ .'
+					sh 'jar -cvf demo1.war .'
 					sh "echo ${DOCKERHUB_PASS} | docker login -u srinijammula --password-stdin"
 					sh 'docker build -t srinijammula/demo1 .'
 				}

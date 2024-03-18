@@ -1,0 +1,175 @@
+<!--SRINI JAMMULA - G01426257
+This is a student survey form which asks for general details, educational background and opinion about campus-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Survey</title>
+    <style>
+        form{
+            background-color: white;
+            display:flexbox;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            width:90%;
+            margin:auto;
+            text-transform: capitalize;
+            font-weight:bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        div{
+            padding:22px;
+        }
+        .inputtext{
+            width:88%;
+            padding:10px 30px;
+            border-radius: 5px;
+            border: 0.5px solid grey;
+        }
+        .required:before {
+            content:" *";
+            color: red;
+        }
+        body{
+            background-color: powderblue;
+        } 
+        h1{
+            text-align: center;
+            font-family: sans-serif;
+        }
+        p{
+            font-family:sans-serif;
+        }
+        textarea {
+            height: 4rem;
+            width: 70%;
+        }   
+        button{
+            display:block;
+            margin:auto;
+            padding:10px;
+            background-color:deepskyblue;
+            color:white;
+            font-weight:bold;
+            border-color:deepskyblue;
+            border-radius: 4px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            letter-spacing: 0.3ch;
+        }
+        div button{
+            display: inline-block;
+            margin-left: 0.65rem;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <br>
+        <h1>Student Survey Form</h1>
+        <div>
+            <label for="a" class="required">first name<br>
+            <input type="text" name="fname" id="a" class="inputtext" required>
+            </label>
+        </div>
+        <div>
+            <label for="b" class="required">last name<br>
+            <input type="text" name="lname" id="b" class="inputtext" required>
+            </label>
+        </div>
+        <div>
+            <label for="c" class="required">street address<br>
+            <input type="text" name="street_address" id="c" class="inputtext" required>
+            </label>
+        </div>
+        <div>
+            <label for="d" class="required">city<br>
+            <input type="text" name="city" id="d" class="inputtext" required>
+            </label>
+        </div>
+        <div>
+            <label for="e" class="required">state<br>
+            <input type="text" name="state" id="e" class="inputtext" required>
+            </label>
+        </div>
+        <div>
+            <label for="f" class="required">zip<br>
+            <input type="number" name="zipcode" id="f" class="inputtext" required>
+            </label>
+        </div>
+        <div>
+            <label for="g" class="required">telephone number<br>
+            <input type="tel" name="fname" id="g" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="234-567-8911" class="inputtext" required>
+            </label>
+        </div>
+        <div>
+            <label for="h" class="required">e-mail<br>
+            <input type="email" name="email" id="h" class="inputtext" required>
+            </label>
+        </div>
+        <div>
+            <label for="i" class="required">date of survey<br>
+            <input type="date" name="date_of_survey" id="i" class="inputtext" required>
+            </label>
+        </div>
+        <div>
+            <p>Most liked about the campus:</p>
+            <label for="j">
+            <input type="checkbox" name="students" id="j">
+            students<br></label>
+            <label for="k">
+            <input type="checkbox" name="location" id="k">
+            location<br></label>
+            <label for="l">
+            <input type="checkbox" name="campus" id="l">
+            campus<br></label>
+            <label for="m">
+            <input type="checkbox" name="atmosphere" id="m">
+            atmosphere<br></label>
+            <label for="n">
+            <input type="checkbox" name="dorm" id="n">
+            dorm rooms<br></label>
+            <label for="o">
+            <input type="checkbox" name="sports" id="o">
+            sports<br></label>
+        </div>
+        <div>
+            <p>How did you get interested in the university?</p>
+            <label for="p">
+            <input type="radio" name="interested" id="p">
+            friends<br></label>
+            <label for="q">
+            <input type="radio" name="interested" id="q">
+            telivision<br></label>
+            <label for="r">
+            <input type="radio" name="interested" id="r">
+            internet<br></label>
+            <label for="s">
+            <input type="radio" name="interested" id="s">
+            other<br></label>
+        </div>
+        <div>
+            <p>Would you recommend this school to other prospective students?</p>
+            <input list="likelihoods" name="likelihood" class="inputtext">
+            <datalist id="likelihoods">
+                <option value="Very Likely">
+                <option value="Likely">
+                <option value="Unlikely">
+            </datalist>
+        </div>
+        <div>
+           <label for="raffle">To win a free movie ticket, Enter at least ten comma-separated numbers (1-100):<br>
+           <input type="text" id="raffle" name="raffle" placeholder="e.g., 5,23,67,12,45,78,34,89,56,91" pattern="(?:[1-9]|[1-9][0-9]|100)(?:,(?:[1-9]|[1-9][0-9]|100)){9}" class="inputtext"> 
+            </label>
+        </div>
+        <div>
+            <p>Additional comments<br></p>
+            <textarea name="comment">Enter here..</textarea>
+        </div>
+        <div>
+        <button type="submit">SUBMIT</button>
+        <button type="reset" style="background-color:crimson;border-color: crimson;">CANCEL</button>
+        </div>
+        <br>
+    </form>
+</body>
+</html>
